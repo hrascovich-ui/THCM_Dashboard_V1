@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import socket
 
 # 🔐 Protección por IP
-ALLOWED_IPS = ["127.0.0.1", "192.168.1.100", "201.222.33.44"]
+ALLOWED_IPS = ["127.0.0.1", "10.229.73.27", "192.168.1.100", "201.222.33.44"]
 def get_client_ip():
     try:
         hostname = socket.gethostname()
