@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: mvo-dashboard
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run MVO_dashboard.py
+    autoDeploy: true
