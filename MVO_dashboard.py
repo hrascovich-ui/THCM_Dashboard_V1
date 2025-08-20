@@ -4,21 +4,6 @@ import numpy as np
 import plotly.graph_objects as go
 import socket
 
-# 🔐 Protección por IP
-ALLOWED_IPS = ["127.0.0.1", "10.229.73.27", "192.168.1.100", "201.222.33.44", "10.229.143.20"]
-def get_client_ip():
-    try:
-        hostname = socket.gethostname()
-        local_ip = socket.gethostbyname(hostname)
-        return local_ip
-    except:
-        return "UNKNOWN"
-
-client_ip = get_client_ip()
-if client_ip not in ALLOWED_IPS:
-    st.error(f"Acceso denegado desde IP: {client_ip}")
-    st.stop()
-
 # Configuración de página
 st.set_page_config(page_title="MVO Dashboard", layout="wide")
 
